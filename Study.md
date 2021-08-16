@@ -28,7 +28,7 @@ Use [DuckDuckGo](https://duckduckgo.com/) or your preferred search engine along 
    ```
 
    ```js
-   // Please write your answer here
+   item => car.add(item);
    ```
 
 2. Consider the functions `renderGuest`, `getGuestsWithChildTicket` and `getGuestsWithChildTicket` functions. Which array iteration methods would you use instead of the for loops?
@@ -77,7 +77,35 @@ Use [DuckDuckGo](https://duckduckgo.com/) or your preferred search engine along 
   ```
 
   ```js
-   // Please write your answer here
+  
+  const guests = [
+    "Paul",
+    "Fatima",
+    "Anna",
+    "Silver",
+  ]
+  
+  
+  
+   const renderGuest = (guests) => {
+    const guestList = document.querySelector('guests')
+    guests.forEach((individualGuest) => {return guestList.innerHTML += `<p>${individualGuest}</p>})
+    }
+    
+    
+    
+    const removeGuest = (guests, name) => {
+  guests = guests.filter((guest, name) => return {guest != name})
+  }
+  
+  
+  
+ const checkInAllGuests = (guests) => {
+    const checkedInGuests = guests.map((guest) => {return `${guest} - Has checked in`})
+  
+    return checkedInGuests
+  }
+  
   ```  
 
 2. Write js code to destructure this object:
@@ -90,6 +118,7 @@ const person = {
 };
 
 // Add your code here to destructure the object 'person'.
+const {name, age, gender} = person;
 ```
 
 
@@ -103,9 +132,7 @@ const person = {
 
 // Edit this object
 const mary = {
-  name: person.name,
-  age: person.age,
-  gender: person.gender,
+  name, age, gender
 };
 ```
 
